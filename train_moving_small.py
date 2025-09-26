@@ -77,7 +77,7 @@ if __name__ == '__main__':
 
         scheduler.step()
         if epoch % 10 == 0:# and epoch > 0:
-            if epoch % 100 == 0 and epoch > 0:
+            if epoch % 10 == 0 and epoch > 0:
                 torch.save(model.state_dict(), log_path+str(epoch)+'.pth')
             # torch.save({'epoch': epoch, 'state_dict': model.state_dict(),
             #             'optimizer': optimizer.state_dict(),
@@ -119,4 +119,5 @@ if __name__ == '__main__':
 
 
     log.info('Finished Training')
+
 
